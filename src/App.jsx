@@ -9,7 +9,7 @@ import blueLemon from './assets/blue-lemon.svg'
 function App() {
   //states
   const [questions, setQuestions] = useState([])
-  const [quizzEnded, setQuizzEnded] = useState(false)
+  const [quizEnded, setQuizEnded] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
   //derived
@@ -19,7 +19,7 @@ function App() {
       saveAnswer={saveAnswer} 
       questionIndex={index} 
       key={`${q.question.slice(0, 20)}-${index}`} 
-      quizzEnded={quizzEnded}
+      quizEnded={quizEnded}
     />
   ))
   const correctAnswerCount = questions.filter((q) => (
@@ -78,7 +78,7 @@ function App() {
 
   function checkAnswers() {
     if(questions.every(q => (q.selectedAnswerIndex !== QUESTION_IS_NOT_ANSWERED))) {
-      setQuizzEnded(true)
+      setQuizEnded(true)
     } else {
       alert("Please answer all questions before checking the answers.")
     }
@@ -89,7 +89,7 @@ function App() {
       prevQuestions.map(q => ({...q, selectedAnswerIndex: QUESTION_IS_NOT_ANSWERED}))
     )
     startQuiz()
-    setQuizzEnded(false)
+    setQuizEnded(false)
   }
 
   return (
@@ -118,15 +118,15 @@ function App() {
             <button onClick={startQuiz}>Start quiz</button>
           </section>)
           : (
-            <div className='quizz-area'>
+            <div className='quiz-area'>
               <section className="questions-area">
                 {questionViews}
               </section>
               
               {
-                !quizzEnded ? 
+                !quizEnded ? 
                   (<button className="check-answers-button" onClick={checkAnswers}>Check answers</button>) :
-                (<section className="quizz-result-area">
+                (<section className="quiz-result-area">
                     <span>{`You scored ${correctAnswerCount}/${QUESTIONS_SIZE} correct answers`}</span>
                     <button onClick={playAgain}>Play again</button>
                 </section>)

@@ -1,15 +1,15 @@
 import { clsx } from 'clsx'
 
-export default function Question({ question, quizzEnded, questionIndex, saveAnswer }) {
+export default function Question({ question, quizEnded, questionIndex, saveAnswer }) {
     const answersView = question.answers.map((answer, index) => (
         <button 
-            disabled={quizzEnded}
+            disabled={quizEnded}
             key={`${answer.slice(0, 10)}-${index}`}
             onClick={() => saveAnswer(questionIndex, index)}
             className={clsx("option", {
-                    clicked: !quizzEnded && question.selectedAnswerIndex === index,
-                    wrong: quizzEnded && index === question.selectedAnswerIndex && question.selectedAnswerIndex !== question.correctAnswerIndex,
-                    correct: quizzEnded && index === question.correctAnswerIndex
+                    clicked: !quizEnded && question.selectedAnswerIndex === index,
+                    wrong: quizEnded && index === question.selectedAnswerIndex && question.selectedAnswerIndex !== question.correctAnswerIndex,
+                    correct: quizEnded && index === question.correctAnswerIndex
                 }
             )}
         >

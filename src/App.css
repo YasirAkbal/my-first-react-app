@@ -10,7 +10,7 @@ button:hover {
   opacity: 0.80 !important; 
 }
 
-.quizz-area {
+.quiz-area {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +90,9 @@ button.option {
   border: 1.5px solid #4D5B9E;
   border-radius: 12px;
   font-weight: 500;
-  padding: 8px 20px; 
+  font-size: clamp(15px, 70%, 24px);
+  padding: 8px 20px;
+  flex: 1;
   box-sizing: border-box;
   height: auto; 
   min-height: 45px; 
@@ -122,7 +124,7 @@ button.check-answers-button {
   font-size: 1rem;
 }
 
-.quizz-result-area {
+.quiz-result-area {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -130,13 +132,13 @@ button.check-answers-button {
   margin-top: 36px;
 }
 
-.quizz-result-area > span {
+.quiz-result-area > span {
   color: #293264;
   font-size: 24px;
   font-weight: 700;
 }
 
-.quizz-result-area > button {
+.quiz-result-area > button {
   background-color: #4D5B9E;
   color: #F5F7FB;
   display: flex;
