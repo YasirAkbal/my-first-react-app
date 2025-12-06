@@ -32,7 +32,7 @@ To run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/my-first-react-app.git
+git clone https://github.com/YasirAkbal/my-first-react-app.git
 
 # Navigate to project folder
 cd my-first-react-app
