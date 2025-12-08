@@ -2,6 +2,9 @@
 
 My first React application! An interactive quiz app focused on film trivia.
 
+## 🌐 Live Demo
+https://quizz-app-yasir-akbal.netlify.app/
+
 ## 📸 Screenshots
 
 <img width="1917" height="911" alt="Image" src="https://github.com/user-attachments/assets/a760bb76-1b0a-4b4c-9d25-4e3f9b7c1e00" />
