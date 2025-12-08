@@ -69,15 +69,6 @@ Through this project, I learned:
 - Loading states and user feedback
 - CSS styling and responsive design
 
-## 🔮 Future Improvements
-
-- [ ] Add category selection
-- [ ] Add difficulty level selection
-- [ ] Save score history with localStorage
-- [ ] Add dark mode support
-- [ ] Add more animations and transitions
-- [ ] Add timer for questions
-
 ## 🙏 Acknowledgments
 
 - [[Open Trivia Database](https://opentdb.com/)](https://opentdb.com/) - For the free quiz API
